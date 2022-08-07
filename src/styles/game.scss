@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: $max_width;
+    background: $main_background;
+    width: $max_width;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameboard {
+    width: $max_width;
+
+    .gray {
+        background-color: gray;
+        color: #fff;
+    }
+
+    .yellow {
+        background-color: #ff0;
+        color: black;
+    }
+
+    .green {
+        background-color: #008000;
+        color: white;
+    }
+
+    .score {
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .wordle-container {
+        .tile-row {
+            display: flex;
+
+            .tile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: $max_width / 5;
+                height: 25vw;
+                font-size: 10vw;
+                font-weight: 900;
+                border: 1px solid rgb(175, 175, 175);
+                text-transform: uppercase;
+
+                @media (min-width: $breakpoint) {
+                    width: $max_width/5;
+                    height: $max_width/5;
+                    font-size: $max_width * 0.1;
+                }
+            }
+        }
+    }
+
+    button.submit-button {
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem auto;
+        padding: 1rem;
+        background-color: gray;
+        width: 75vw;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 0.6rem;
+        border: none;
+
+        @media (min-width: $breakpoint) {
+            width: $max_width * 0.75;
+        }
+
+        &.valid {
+            background-color: #1a92ba !important;
+        }
+
+        &.invalid {
+            background-color: red;
+        }
+    }
+
+    .keyboard {
+        &-container {
+            width: $max_width;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-key {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-transform: capitalize;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            &.active {
+                background-color: #3c3c3c;
+                color: #fff;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

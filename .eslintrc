@@ -1,0 +1,15 @@
+{
+    // "extends": "airbnb-base/legacy",
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": 2
+    }
+}
